@@ -1,5 +1,11 @@
 :root{
   /* variables */
+  --light: #ffffff;
+  --light-background: #f8f4f4;
+  --dark: #00171f;
+  --dark-2: #003459;
+  --main-dark: #007ea7;
+  --main: #00a8e8;
 }
 
 *, *::before, *::after{

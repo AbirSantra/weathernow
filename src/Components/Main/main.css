@@ -1,0 +1,19 @@
+.main {
+    /* background-color: var(--light-background); */
+    color: var(--main-dark);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    min-height: 100vh;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light);
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    background: #ffffff;
+    box-shadow: 20px 20px 60px #e6e6e6, -20px -20px 60px #ffffff;
+}

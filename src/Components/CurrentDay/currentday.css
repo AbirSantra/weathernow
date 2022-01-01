@@ -1,0 +1,33 @@
+.currentday {
+    margin: 2rem 0;
+    padding: 2rem 2rem;
+    max-width: 300px;
+    min-height: fit-content;
+    background-color: var(--light);
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 20px 20px 60px #e6e6e6, -20px -20px 60px #ffffff;
+    font-size: 1.2rem;
+}
+
+.temp-symbol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.temperature {
+    position: relative;
+    font-size: 5rem;
+}
+
+.degree {
+    font-size: 1.5rem;
+    position: relative;
+    top: -35px;
+    left: 5px;
+}
+
+.weathericon img {
+    filter: hue-rotate(100);
+}
