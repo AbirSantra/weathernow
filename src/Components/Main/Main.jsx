@@ -8,8 +8,7 @@ import Forecast from "../Forecast/Forecast";
 import useForecast from "../../hooks/useForecast";
 
 const Main = () => {
-    const { isError, isLoading, forecast, submitRequest, background } =
-        useForecast();
+    const { isError, isLoading, forecast, submitRequest } = useForecast();
 
     const onSubmit = (value) => {
         submitRequest(value);
