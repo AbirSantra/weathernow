@@ -8,7 +8,8 @@ import Forecast from "../Forecast/Forecast";
 import useForecast from "../../hooks/useForecast";
 
 const Main = () => {
-    const { isError, isLoading, forecast, submitRequest } = useForecast();
+    const { isError, isLoading, forecast, submitRequest, background } =
+        useForecast();
 
     const onSubmit = (value) => {
         submitRequest(value);
@@ -18,6 +19,9 @@ const Main = () => {
     return (
         <>
             <div className="main">
+                <div className="backImg">
+                    {/* <img src={background} alt="" /> */}
+                </div>
                 <div className="main-info">
                     <div className="header-content">
                         <Header></Header>
@@ -29,10 +33,10 @@ const Main = () => {
                     {/* Loader */}
                     {isLoading && <Loader></Loader>}
                     {/* Forecast */}
+                    {forecast && !isLoading && (
+                        <Forecast forecast={forecast}></Forecast>
+                    )}
                 </div>
-                {forecast && !isLoading && (
-                    <Forecast forecast={forecast}></Forecast>
-                )}
             </div>
         </>
     );

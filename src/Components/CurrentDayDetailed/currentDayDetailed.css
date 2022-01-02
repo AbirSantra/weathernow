@@ -1,0 +1,35 @@
+.detailed-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 550px;
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+.detailed-heading {
+    z-index: 1;
+}
+
+.detailed-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.card {
+    margin: 1rem 0;
+    padding: 2rem 2rem;
+    width: 220px;
+    height: 220px;
+    background-color: var(--light);
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 20px 20px 60px #e6e6e6, -20px -20px 60px #ffffff;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

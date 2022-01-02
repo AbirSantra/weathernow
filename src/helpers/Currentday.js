@@ -1,4 +1,4 @@
-const Currentday = (data,name) =>({
+const Currentday = (data, name) => ({
     location: name,
     country: data.sys.country,
     temperature: ~~data.main.temp,
