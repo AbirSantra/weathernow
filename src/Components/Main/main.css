@@ -1,32 +1,21 @@
 .main {
-    /* background-color: var(--light-background); */
-    position: relative;
-    color: var(--main-dark);
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
 }
 
 .main-info {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 2rem 2rem;
-    position: relative;
-    z-index: 10;
+    max-width: 1440px;
+    padding: 0 4rem;
+    width: 100%;
+    height: calc(100vh - 8rem);
 }
 
 .header-content {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: space-between;
-    height: 6rem;
-    background-color: var(--light);
-    border-radius: 20px;
-    padding: 1rem 2rem;
-    background: #ffffff;
-    box-shadow: 20px 20px 60px #e6e6e6, -20px -20px 60px #ffffff;
-}
-.backImg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
+    /* height: 4rem; */
 }

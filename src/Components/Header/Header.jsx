@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.css";
-import sunlogo from '../../img/sun.png'
+import sunlogo from "../../img/sun.png";
 
 const Header = () => {
     return (
@@ -9,7 +9,8 @@ const Header = () => {
                 <img src={sunlogo} alt="" />
             </div>
             <div className="title">
-                Weather <span className="now">Now</span>
+                Weather<span className="now">Now</span>
+                <p className="powered">Powered by OpenWeatherAPI</p>
             </div>
         </div>
     );

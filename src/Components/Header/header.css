@@ -1,29 +1,35 @@
-.header{
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: var(--light-background); */
 }
 
-.logo{
-    width: 64px;
+.logo {
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    margin-right: 18px;
 }
 
-.logo img{
+.logo img {
     width: 100%;
 }
 
-.title{
-    font-size: 2.5rem;
+.title {
+    font-size: 36px;
+    color: var(--dark);
     font-weight: 500;
-    text-align: center;
 }
 
-
-.now{
+.now {
     font-weight: 800;
+}
+
+.powered {
+    font-size: 14px;
+    text-align: right;
+    color: var(--light-2);
+    font-weight: 400;
+    line-height: 0px;
 }

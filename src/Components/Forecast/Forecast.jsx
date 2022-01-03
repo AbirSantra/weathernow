@@ -8,10 +8,15 @@ const Forecast = ({ forecast }) => {
     // console.log(forecast);
     return (
         <div className="forecast-container">
-            <CurrentDay forecastData={forecast.currentDay}></CurrentDay>
-            <CurrentDayDetailed
-                forecastData={forecast.currentDayDetailed}
-            ></CurrentDayDetailed>
+            <div className="left-panel">
+                <CurrentDay forecastData={forecast.currentDay}></CurrentDay>
+                <p className="crafted">Crafted & Coded by Abir Santra</p>
+            </div>
+            <div className="right-panel">
+                {/* <CurrentDayDetailed
+                    forecastData={forecast.currentDayDetailed}
+                ></CurrentDayDetailed> */}
+            </div>
         </div>
     );
 };

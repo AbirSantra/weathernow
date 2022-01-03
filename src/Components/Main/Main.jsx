@@ -15,7 +15,7 @@ const Main = () => {
         submitRequest(value);
     };
 
-    // console.log(background);
+    console.log(background);
     return (
         <>
             <div className="main">

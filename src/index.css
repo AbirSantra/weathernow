@@ -1,28 +1,32 @@
-:root{
-  /* variables */
-  --light: #ffffff;
-  --light-background: #f8f4f4;
-  --dark: #00171f;
-  --dark-2: #003459;
-  --main-dark: #007ea7;
-  --main: #00a8e8;
+:root {
+    /* variables */
+    --light: #ffffff;
+    --light-background: #f8f4f4;
+    --dark: #333866;
+    --main: #dfe3ff;
+    --light-2: #adb1cc;
 }
 
-*, *::before, *::after{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-body, button, input, textarea{
-  font-family: 'Poppins', sans-serif;
+body,
+button,
+input,
+textarea {
+    font-family: "Poppins", sans-serif;
 }
 
-a{
-  text-decoration: none;
+a {
+    text-decoration: none;
 }
 
-ul{
-  list-style: none;
+ul {
+    list-style: none;
 }

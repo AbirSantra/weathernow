@@ -1,33 +1,72 @@
-.currentday {
-    margin: 2rem 0;
-    padding: 2rem 2rem;
-    max-width: 300px;
-    min-height: 550px;
-    background-color: var(--light);
-    border-radius: 20px;
-    background: #ffffff;
-    box-shadow: 20px 20px 60px #e6e6e6, -20px -20px 60px #ffffff;
-    font-size: 1.2rem;
+.currentday-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
 }
 
-.temp-symbol {
+.description {
+    font-size: 18px;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.weathericon {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
+.weathericon img {
+    width: 180px;
+}
+
 .temperature {
+    font-size: 96px;
+    color: var(--dark);
     position: relative;
-    font-size: 5rem;
 }
 
 .degree {
-    font-size: 1.5rem;
-    position: relative;
-    top: -35px;
-    left: 5px;
+    font-size: 36px;
+    color: var(--dark);
+    position: absolute;
+    top: 20px;
 }
 
-.weathericon img {
-    filter: hue-rotate(100);
+.feelslike {
+    font-size: 24px;
+    color: var(--light-2);
+}
+
+.infomatics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 4rem;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark);
+    font-size: 20px;
+}
+
+.icon {
+    font-size: 26px;
+    color: var(--dark);
+    margin-right: 1rem;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark);
+    font-size: 20px;
 }

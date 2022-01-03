@@ -1,5 +1,31 @@
 .forecast-container {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 0;
+    height: 100%;
+}
+
+.left-panel {
+    flex: 1;
+    height: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+}
+
+.right-panel {
+    flex: 3;
+    height: 100%;
+    background-color: var(--main);
+    border-radius: 20px;
+    padding: 54px;
+    margin-left: 60px;
+}
+
+.crafted {
+    font-size: 14px;
+    color: var(--light-2);
+    font-weight: 400;
 }

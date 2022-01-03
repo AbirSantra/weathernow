@@ -17,34 +17,48 @@ const CurrentDay = ({ forecastData }) => {
         "Saturday",
     ];
     const month = [
-        "January",
-        "February",
-        "March",
-        "April",
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
         "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
     ];
     return (
-        <div className="currentday">
+        <div className="currentday-container">
+            <div className="weathericon">
+                <img src={forecastData.weatherIcon} alt="" />
+            </div>
             <div className="description">{forecastData.description}</div>
-            <div className="temp-symbol">
-                <div className="temperature">
-                    {forecastData.temperature}
-                    <span className="degree">&deg;C</span>
+            <div className="temperature">
+                {forecastData.temperature}
+                <span className="degree">&deg;C</span>
+            </div>
+            <div className="feelslike">
+                Feels like {forecastData.feels_like}&deg;
+            </div>
+            <div className="infomatics">
+                <div className="date">
+                    <div className="icon">
+                        <i className="fas fa-calendar-day"></i>
+                    </div>
+                    <p>{`${day[dayNumber]}, ${dateNumber} ${month[monthNumber]}`}</p>
                 </div>
-                <div className="weathericon">
-                    <img src={forecastData.weatherIcon} alt="" />
+                <div className="location">
+                    <div className="icon">
+                        <i className="fas fa-map-marker-alt"></i>
+                    </div>
+                    <p>
+                        {forecastData.location}, {forecastData.country}
+                    </p>
                 </div>
             </div>
-            <div className="date">{`${day[dayNumber]}, ${dateNumber} ${month[monthNumber]}`}</div>
-            <div className="name">{forecastData.location}</div>
-            <div className="country">{forecastData.country}</div>
         </div>
     );
 };
