@@ -27,9 +27,9 @@ const Main = () => {
                         <Header></Header>
                         {/* Form */}
                         {<Form submitSearch={onSubmit} />}
+                        {/* Error */}
+                        {isError && <Error message={isError} />}
                     </div>
-                    {/* Error */}
-                    {isError && <Error message={isError} />}
                     {/* Loader */}
                     {isLoading && <Loader></Loader>}
                     {/* Forecast */}

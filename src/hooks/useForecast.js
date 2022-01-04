@@ -4,7 +4,7 @@ import Currentday from "../helpers/Currentday";
 import CurrentdayDetailed from "../helpers/CurrentdayDetailed";
 import SevenDay from "../helpers/SevenDay";
 
-const API_KEY = "7e8d25e94182d5ebe0386c6ce1b812a2";
+const API_KEY = process.env.REACT_APP_API_KEY;
 const BASE_URL = `api.openweathermap.org/data/2.5/weather`;
 const CORS_URL = `https://the-ultimate-api-challenge.herokuapp.com`;
 const CURRENTDAY_URL = `${CORS_URL}/${BASE_URL}`;
@@ -73,6 +73,7 @@ const useForecast = () => {
                     lon: lon,
                     appid: API_KEY,
                     units: "metric",
+                    cnt: 7,
                 },
             });
 

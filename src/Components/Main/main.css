@@ -8,9 +8,9 @@
 
 .main-info {
     max-width: 1440px;
-    padding: 0 4rem;
+    padding: 2rem 4rem;
     width: 100%;
-    height: calc(100vh - 8rem);
+    min-height: 100vh;
 }
 
 .header-content {

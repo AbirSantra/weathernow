@@ -1,25 +1,26 @@
-.detailed-container {
+.sevenday-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     color: var(--dark);
+    margin-top: 1rem;
 }
 
-.detailed-heading {
+.sevenday-heading {
     font-weight: 600;
 }
 
-.detailed-info {
+.sevenday-info {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
-.card {
+.sevenday-card {
     height: 150px;
-    width: 190px;
+    width: 110px;
     background-color: var(--light);
     border-radius: 15px;
     margin: 1rem 0;
@@ -28,26 +29,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.label {
-    position: absolute;
-    top: 10px;
-    left: 15px;
+.week-icon {
+    width: 64px;
+}
+
+.week-icon img {
+    width: 100%;
+}
+
+.temp-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
     color: var(--light-2);
-    font-size: 1rem;
-}
-
-.data {
-    font-size: 2.4rem;
-    font-weight: 600;
-}
-
-.unit {
-    font-size: 1.2rem;
-    color: var(--light-2);
-    font-weight: 400;
-    position: absolute;
-    bottom: 10px;
-    right: 15px;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import CurrentDay from "../CurrentDay/CurrentDay";
 import CurrentDayDetailed from "../CurrentDayDetailed/CurrentDayDetailed";
+import SevenDay from "../SevenDay/SevenDay";
 import "./forecast.css";
 
 const Forecast = ({ forecast }) => {
@@ -13,9 +14,10 @@ const Forecast = ({ forecast }) => {
                 <p className="crafted">Crafted & Coded by Abir Santra</p>
             </div>
             <div className="right-panel">
-                {/* <CurrentDayDetailed
+                <CurrentDayDetailed
                     forecastData={forecast.currentDayDetailed}
-                ></CurrentDayDetailed> */}
+                ></CurrentDayDetailed>
+                <SevenDay forecastData={forecast.sevenday}></SevenDay>
             </div>
         </div>
     );
