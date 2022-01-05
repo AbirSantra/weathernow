@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/weathernow/static/css/main.c16cc6ba.css",
-    "main.js": "/weathernow/static/js/main.1a97f084.js",
+    "main.css": "/weathernow/static/css/main.7e19eb93.css",
+    "main.js": "/weathernow/static/js/main.26d546b2.js",
     "static/media/sun.png": "/weathernow/static/media/sun.6d48da504f4816188c8d.png",
+    "static/media/Dual Ball-1s-200px.svg": "/weathernow/static/media/Dual Ball-1s-200px.00c2461a4cb9a0f6cc0690b8e67fdce6.svg",
     "index.html": "/weathernow/index.html",
     "static/media/search-solid.svg": "/weathernow/static/media/search-solid.cc51b702c98798cd916ea5a3a8ca8b54.svg",
-    "main.c16cc6ba.css.map": "/weathernow/static/css/main.c16cc6ba.css.map",
-    "main.1a97f084.js.map": "/weathernow/static/js/main.1a97f084.js.map"
+    "main.7e19eb93.css.map": "/weathernow/static/css/main.7e19eb93.css.map",
+    "main.26d546b2.js.map": "/weathernow/static/js/main.26d546b2.js.map"
   },
   "entrypoints": [
-    "static/css/main.c16cc6ba.css",
-    "static/js/main.1a97f084.js"
+    "static/css/main.7e19eb93.css",
+    "static/js/main.26d546b2.js"
   ]
 }
