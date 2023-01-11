@@ -6,99 +6,79 @@ import SevenDay from "../helpers/SevenDay";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const BASE_URL = `api.openweathermap.org/data/2.5/weather`;
-const CORS_URL = `https://the-ultimate-api-challenge.herokuapp.com`;
+const CORS_URL = `https://`;
 const CURRENTDAY_URL = `${CORS_URL}/${BASE_URL}`;
-const DAILY_URL = `${CORS_URL}/https://api.openweathermap.org/data/2.5/onecall`;
-
-const ACESS_KEY = `pEsQ3RGbOlsWjrzwzSuM7wMb6Je_z2qKW0jsKzNv5wI`;
-const UNSPLASH_URL = `https://api.unsplash.com/photos/random`;
-const IMG_URL = `${CORS_URL}/${UNSPLASH_URL}`;
+const DAILY_URL = `https://api.openweathermap.org/data/2.5/onecall`;
 
 const useForecast = () => {
-    const [isError, setError] = useState(false);
-    const [isLoading, setLoading] = useState(false);
-    const [forecast, setForecast] = useState(null);
-    const [background, setBackground] = useState("");
+	const [isError, setError] = useState(false);
+	const [isLoading, setLoading] = useState(false);
+	const [forecast, setForecast] = useState(null);
 
-    const gatherForecastData = ({ data, sevenDay }) => {
-        const currentDay = Currentday(data, data.name);
-        const currentDayDetailed = CurrentdayDetailed(data);
-        const sevenday = SevenDay(sevenDay);
-        // console.log(currentDay);
-        // console.log(currentDayDetailed);
-        setForecast({ currentDay, currentDayDetailed, sevenday });
-        setLoading(false);
-    };
+	const gatherForecastData = ({ data, sevenDay }) => {
+		const currentDay = Currentday(data, data.name);
+		const currentDayDetailed = CurrentdayDetailed(data);
+		const sevenday = SevenDay(sevenDay);
+		// console.log(currentDay);
+		// console.log(currentDayDetailed);
+		setForecast({ currentDay, currentDayDetailed, sevenday });
+		setLoading(false);
+	};
 
-    const submitRequest = async (location) => {
-        try {
-            setLoading(true);
-            setError(false);
+	const submitRequest = async (location) => {
+		try {
+			setLoading(true);
+			setError(false);
 
-            //api call for current day info
-            const { data } = await axios(CURRENTDAY_URL, {
-                params: {
-                    q: location,
-                    appid: API_KEY,
-                    units: "metric",
-                },
-            });
-            if (!data || data.length === 0) {
-                setError("No data or data length!");
-                return;
-            }
-            console.log(data);
+			//api call for current day info
+			const { data } = await axios(CURRENTDAY_URL, {
+				params: {
+					q: location,
+					appid: API_KEY,
+					units: "metric",
+				},
+			});
+			if (!data || data.length === 0) {
+				setError("No data or data length!");
+				return;
+			}
+			console.log(data);
 
-            //api call for background image
-            const category = data.weather[0].main;
-            console.log(category);
-            const imgData = await axios(IMG_URL, {
-                params: {
-                    query: category,
-                    client_id: ACESS_KEY,
-                    orientation: "landscape",
-                },
-            });
-            setBackground(imgData.data.urls.raw + "fit=clip&w=1920");
-            // console.log(background);
-            // console.log(imgData);
+			//api call for daily forecast
+			const lat = data.coord.lat;
+			const lon = data.coord.lon;
 
-            //api call for daily forecast
-            const lat = data.coord.lat;
-            const lon = data.coord.lon;
+			const dailyData = await axios(DAILY_URL, {
+				params: {
+					lat: lat,
+					lon: lon,
+					appid: API_KEY,
+					units: "metric",
+					cnt: 7,
+				},
+			});
 
-            const dailyData = await axios(DAILY_URL, {
-                params: {
-                    lat: lat,
-                    lon: lon,
-                    appid: API_KEY,
-                    units: "metric",
-                    cnt: 7,
-                },
-            });
+			if (!dailyData.data || dailyData.data.length === 0) {
+				setError("No data or data length!");
+				return;
+			}
+			console.log(dailyData.data.daily);
+			const sevenDay = dailyData.data.daily;
 
-            if (!dailyData.data || dailyData.data.length === 0) {
-                setError("No data or data length!");
-                return;
-            }
-            console.log(dailyData.data.daily);
-            const sevenDay = dailyData.data.daily;
+			gatherForecastData({ data, sevenDay });
+		} catch (error) {
+			setError("Api server error");
+			console.log(error);
+			setLoading(false);
+		}
+	};
 
-            gatherForecastData({ data, sevenDay });
-        } catch (error) {
-            setError("Api server error");
-            console.log(error);
-            setLoading(false);
-        }
-    };
-
-    return {
-        isError,
-        isLoading,
-        forecast,
-        submitRequest,
-        background,
-    };
+	return {
+		isError,
+		isLoading,
+		forecast,
+		submitRequest,
+	};
 };
 
 export default useForecast;
