@@ -1,21 +1,21 @@
 .main {
-    background-color: var(--light);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+	background-color: var(--light);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
 }
 
 .main-info {
-    max-width: 1440px;
-    padding: 2rem 4rem;
-    width: 100%;
-    min-height: 100vh;
+	max-width: 1440px;
+	padding: 2rem 4rem;
+	width: 100%;
+	min-height: 100vh;
 }
 
 .header-content {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    /* height: 4rem; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* height: 4rem; */
 }
